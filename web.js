@@ -8,11 +8,8 @@ var fString = fs.readFileSync('index.html');
 
 var fString2 = new Buffer(fString);
 
-console.log(fString2);
-
-
 app.get('/', function(request, response) {
-  response.send(fString2);
+  response.send(fString2.toString());
 });
 
 var port = process.env.PORT || 5000;
